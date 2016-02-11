@@ -69,7 +69,9 @@ the following statement
 
 ### Components
 
-* 	[Oracle SUN JDK 8.0.45](http://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html)
+*   [Centos 7](https://hub.docker.com/_/centos/)
+*   [Oracle SUN JDK 8.0.45](http://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html)
+*   [Oracle SUN JDK 8.0.45](http://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html)
 *   [Apache Tomcat 7.0.67](https://www.apache.org/dist/tomcat/tomcat-7/v7.0.67/bin/apache-tomcat-7.0.67.tar.gz)
 *   [Alfresco Community 5.0.d distribution ZIP file](https://process.alfresco.com/ccdl/?file=release/community/5.0.d-build-00002/alfresco-community-5.0.d.zip)  
 
