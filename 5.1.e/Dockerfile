@@ -6,11 +6,7 @@ RUN yum install -y \
     unzip \
     sed 
 
-# Alfresco installation
-ENV ALF_VERSION 5.0.d
-ENV ALF_BUILD 5.0.d-build-00002
-ENV ALF_ZIP alfresco-community-$ALF_VERSION.zip
-ENV ALF_DOWNLOAD_URL http://dl.alfresco.com/release/community/$ALF_BUILD/$ALF_ZIP
+ENV ALF_DOWNLOAD_URL https://process.alfresco.com/ccdl/?file=release/community/201602-build-00005/alfresco-community-distribution-201602.zip
 ENV ALF_HOME /usr/local/alfresco
 
 RUN set -x \
