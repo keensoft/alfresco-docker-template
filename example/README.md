@@ -14,9 +14,16 @@ This example makes use of [keensoft alfresco-docker-template](https://hub.docker
 
 	docker build -t \(your_tag\) .
 
-* Finally, run the dockerized Alfresco 
+* Run the dockerized Alfresco 
 
 	docker run --name \(your_name\) --link postgres:postgres --link libreoffice:libreoffice -d \(your_tag\)
+	
+* Watch startup progress
+
 	docker logs -f \(your_name\)
+
+* Access 
+
+	http://localhost:8080/share (admin/admin)
 
 
