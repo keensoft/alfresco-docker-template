@@ -12,8 +12,8 @@ ENV ALF_HOME /usr/local/alfresco
 RUN set -x \
 	&& mkdir -p $ALF_HOME \
 	&& wget $ALF_DOWNLOAD_URL \
-	&& unzip $ALF_ZIP -d /tmp \
-	&& rm -f $ALF_ZIP
+	&& unzip alfresco-community-5.0.d.zip -d /tmp \
+	&& rm -f alfresco-community-5.0.d.zip
 
 WORKDIR $ALF_HOME
 ENV DIST /tmp/alfresco-community-5.0.d
