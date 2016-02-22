@@ -2,6 +2,7 @@
 
 *  5.1.e (201602-GA) , latest [5.1.e/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.e/Dockerfile)
 *  5.0.d [5.0.d/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.0.d/Dockerfile)
+*  4.2.c [4.2.c/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/4.2.c/Dockerfile)
 
 ### Description
 
