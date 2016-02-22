@@ -6,14 +6,14 @@ RUN yum install -y \
     unzip \
     sed 
 
-ENV ALF_DOWNLOAD_URL https://process.alfresco.com/ccdl/?file=release/community/build-04576/alfresco-community-4.2.c.zip
+ENV ALF_DOWNLOAD_URL http://dl.alfresco.com/release/community/build-04576/alfresco-community-4.2.c.zip
 ENV ALF_HOME /usr/local/alfresco
 
 RUN set -x \
 	&& mkdir -p $ALF_HOME \
 	&& wget $ALF_DOWNLOAD_URL \
-	&& unzip $ALF_ZIP -d /tmp \
-	&& rm -f $ALF_ZIP
+	&& unzip alfresco-community-4.2.c.zip -d /tmp \
+	&& rm -f alfresco-community-4.2.c.zip
 
 WORKDIR $ALF_HOME
 ENV DIST /tmp/alfresco-community-4.2.c
