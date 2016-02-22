@@ -12,11 +12,11 @@ This example makes use of [keensoft alfresco-docker-template](https://hub.docker
 
 * Build this new Docker image
 
-	docker build -t "<your_tag>" .
+	docker build -t \(your_tag\) .
 
 * Finally, run the dockerized Alfresco 
 
-	docker run --name "<your_name>" --link postgres:postgres --link libreoffice:libreoffice -d "<your_tag>"
-	docker logs -f "<your_name>"
+	docker run --name \(your_name\) --link postgres:postgres --link libreoffice:libreoffice -d \(your_tag\)
+	docker logs -f \(your_name\)
 
 
