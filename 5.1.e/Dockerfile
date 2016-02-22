@@ -11,13 +11,12 @@ ENV ALF_HOME /usr/local/alfresco
 
 RUN set -x \
 	&& mkdir -p $ALF_HOME \
-	&& mkdir /tmp/alfresco \
 	&& wget $ALF_DOWNLOAD_URL \
-	&& unzip $ALF_ZIP -d /tmp/alfresco \
+	&& unzip $ALF_ZIP -d /tmp \
 	&& rm -f $ALF_ZIP
 
 WORKDIR $ALF_HOME
-
+ENV DIST /tmp/alfresco-community-distribution-201602
 ENV PATH $ALF_HOME/bin:$PATH
 
 EXPOSE 8080
