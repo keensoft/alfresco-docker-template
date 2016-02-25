@@ -1,0 +1,24 @@
+version: "2"
+services:
+ alfresco:
+    build: .
+    depends_on:
+      - postgres
+      - libreoffice
+    container_name: alfresco-example-container
+    links:
+      - postgres
+      - libreoffice
+    ports:
+      - 8080:8080
+
+ libreoffice:
+    image: keensoft/libreoffice:latest
+    container_name: libreoffice
+ postgres:
+    image: postgres 
+    container_name: postgres
+    environment:
+      - POSTGRES_DB=alfresco
+      - POSTGRES_USER=alfresco
+      - POSTGRES_PASSWORD=alfresco
