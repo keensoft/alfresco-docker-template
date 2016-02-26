@@ -16,9 +16,7 @@ RUN set -x \
         && mv $DIST/solr4 . \
         && mv $DIST/web-server/shared tomcat/ \
         && mv $DIST/web-server/lib/*.jar tomcat/lib/ \
-        && mv $DIST/web-server/webapps/alfresco.war tomcat/webapps/alfresco.war \
-        && mv $DIST/web-server/webapps/share.war tomcat/webapps/share.war \
-	&& mkdir tomcat/webapps/solr4 \
+        && mv $DIST/web-server/webapps/* tomcat/webapps/ \
         && mv $DIST/alf_data . \
         && mv $DIST/amps . \
         && mv $DIST/bin . \
@@ -26,10 +24,7 @@ RUN set -x \
         && mv $DIST/README.txt . \
         && rm -rf $CATALINA_HOME/webapps/docs \
         && rm -rf $CATALINA_HOME/webapps/examples \
-        && mkdir $CATALINA_HOME/shared/lib $ALF_HOME/amps_share
-
-RUN set -x \
-	&& unzip $DIST/web-server/webapps/solr4.war -d tomcat/webapps/solr4 \
+        && mkdir $CATALINA_HOME/shared/lib $ALF_HOME/amps_share \
         && rm -rf $DIST 
 
 RUN set -x \
@@ -44,7 +39,6 @@ RUN set -x \
 COPY assets/tomcat/catalina.properties $ALF_HOME/tomcat/conf/catalina.properties
 COPY assets/tomcat/setenv.sh $ALF_HOME/tomcat/bin/setenv.sh
 COPY assets/alfresco/alfresco-global.properties $ALF_HOME/tomcat/shared/classes/alfresco-global.properties
-COPY assets/solr4/web.xml $ALF_HOME/tomcat/webapps/solr4/WEB-INF/web.xml
 
 # AMPS installation
 COPY assets/amps $ALF_HOME/amps
