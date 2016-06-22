@@ -27,19 +27,18 @@ Obviously, there are allways parts of your talk that you would like to have done
 
 To go fordward you could do something of these
 
-	* Do changes on your project (Dockerfile, assets, etc) and rebuild your containers (prefered way for me), then commit those changes and share the new state of the application
+* Do changes on your project (Dockerfile, assets, etc) and rebuild your containers (prefered way for me), then commit those changes and share the new state of the application
 
-	* Get the container's shell and do your changes on hot-deploying stuff, you lost consistency with your Dockerfile
+* Get the container's shell and do your changes on hot-deploying stuff, you lost consistency with your Dockerfile
 
-	```
-	docker exec -it <your_running_container_name> bash
-	```
-
-	* Docker Machine has the "scp" command, i haven't try this one
+```
+docker exec -it <your_running_container_name> bash
+```
+* Docker Machine has the "scp" command, i haven't try this one
 	
-	* The [Tomcat image](https://hub.docker.com/r/keensoft/centos7-java8-tomcat7/) this template is based on has the manager app on it with (manager / manager) credentials. There you can redeploy your war file, **as you can't stop** the main process of a container or it will just stop the container itself. Again you lost consistency with your Dockerfile
+* The [Tomcat image](https://hub.docker.com/r/keensoft/centos7-java8-tomcat7/) this template is based on has the manager app on it with (manager / manager) credentials. There you can redeploy your war file, **as you can't stop** the main process of a container or it will just stop the container itself. Again you lost consistency with your Dockerfile
 
-	* You can do [docker commit](https://docs.docker.com/engine/reference/commandline/commit/) and create a new image with your changes, but you lost consistency with your Dockerfiles.
+* You can do [docker commit](https://docs.docker.com/engine/reference/commandline/commit/) and create a new image with your changes, but you lost consistency with your Dockerfiles.
 
 ### Stack
 
