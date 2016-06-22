@@ -2,7 +2,7 @@
 
 This template can be used to , 
 
-*  5.1.e (201605-GA) , latest [5.1.g/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.g/Dockerfile)
+*  5.1.g (201605-GA) , latest [5.1.g/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.g/Dockerfile)
 *  5.1.f (201604-GA) [5.1.f/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.f/Dockerfile)
 *  5.1.e (201602-GA) [5.1.e/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.e/Dockerfile)
 *  5.0.d [5.0.d/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.0.d/Dockerfile)
