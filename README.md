@@ -1,10 +1,8 @@
 # alfresco-docker-template
 
-This template can be used to , 
-
-*  5.1.g (201605-GA) , latest [5.1.g/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.g/Dockerfile)
-*  5.1.f (201604-GA) [5.1.f/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.f/Dockerfile)
-*  5.1.e (201602-GA) [5.1.e/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.1.e/Dockerfile)
+*  201605-GA , latest [201605-GA/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/201605-GA/Dockerfile)
+*  201604-GA [201604-GA/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/201604-GA/Dockerfile)
+*  201602-GA [201602-GA/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/201602-GA/Dockerfile)
 *  5.0.d [5.0.d/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.0.d/Dockerfile)
 *  4.2.c [4.2.c/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/4.2.c/Dockerfile)
 
@@ -43,8 +41,8 @@ docker exec -it <your_running_container_name> bash
 ### Stack
 
 *   [Centos 7](https://hub.docker.com/_/centos/)
-*   [Oracle SUN JDK 8.0.45](http://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html)
-*   [Apache Tomcat 7.0.67](https://www.apache.org/dist/tomcat/tomcat-7/v7.0.67/bin/apache-tomcat-7.0.67.tar.gz)
+*   [Oracle SUN JDK 8u91](http://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html)
+*   [Apache Tomcat 7.0.69](https://www.apache.org/dist/tomcat/tomcat-7/v7.0.69/bin/apache-tomcat-7.0.69.tar.gz)
 
 ### Complete example
 
