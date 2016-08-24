@@ -1,10 +1,8 @@
-FROM keensoft/centos7-java8-tomcat7
-MAINTAINER Mikel Asla mikel.asla@keensoft.es
+FROM keensoft/centos7-java8-tomcat7.0.69
+MAINTAINER keensoft.es
 
 RUN yum update -y
-RUN yum install -y \
-    unzip \
-    sed 
+RUN yum install -y unzip 
 
 ENV ALF_DOWNLOAD_URL http://dl.alfresco.com/release/community/build-04576/alfresco-community-4.2.c.zip
 ENV ALF_HOME /usr/local/alfresco
