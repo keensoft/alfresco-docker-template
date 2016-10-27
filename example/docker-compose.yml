@@ -13,8 +13,9 @@ services:
       - 8080:8080
 
  libreoffice:
-    image: keensoft/libreoffice:latest
+    image: keensoft/libreoffice:4.4.5
     container_name: libreoffice
+    user: root
  postgres:
     image: postgres 
     container_name: postgres
