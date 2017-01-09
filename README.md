@@ -1,10 +1,11 @@
 # alfresco-docker-template
 
-*  201605-GA , latest [201605-GA/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/201605-GA/Dockerfile)
-*  201604-GA [201604-GA/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/201604-GA/Dockerfile)
-*  201602-GA [201602-GA/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/201602-GA/Dockerfile)
-*  5.0.d [5.0.d/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.0.d/Dockerfile)
-*  4.2.c [4.2.c/DockerFile](https://github.com/keensoft/alfresco-docker-template/blob/master/4.2.c/Dockerfile)
+*  201612-GA, latest [201612-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201612-GA/alfresco/Dockerfile)
+*  201605-GA [201605-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201605-GA/Dockerfile)
+*  201604-GA [201604-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201604-GA/Dockerfile)
+*  201602-GA [201602-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201602-GA/Dockerfile)
+*  5.0.d [5.0.d/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/5.0.d/Dockerfile)
+*  4.2.c [4.2.c/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/4.2.c/Dockerfile)
 
 ### Description
 
