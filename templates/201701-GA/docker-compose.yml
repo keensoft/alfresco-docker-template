@@ -1,0 +1,30 @@
+version: '2'
+services:
+ alfresco:
+  build: ./alfresco
+  links:
+   - solr6
+   - libreoffice
+  ports:
+   - 80:80
+   - 9999:9999
+
+ httpd:
+  build: ./httpd
+  network_mode: service:alfresco
+
+ db:
+  build: ./postgres
+  network_mode: service:alfresco
+  environment:
+   - POSTGRES_DB=alfresco
+   - POSTGRES_USER=alfresco
+   - POSTGRES_PASSWORD=alfresco
+
+ solr6:
+  image: keensoft/alfresco-solr6:201701-GA
+  ports:
+   - 8983:8983
+
+ libreoffice:
+  image: keensoft/libreoffice:5.2.1

@@ -1,4 +1,4 @@
-FROM keensoft/alfresco-docker-template:latest
+FROM keensoft/alfresco-docker-template:201605-GA
 MAINTAINER Mikel Asla mikel.asla@keensoft.es
 
 RUN yum update -y
