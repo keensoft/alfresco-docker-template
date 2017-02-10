@@ -28,6 +28,14 @@ FROM keensoft/alfresco-docker-template:latest
 
 ## 5.0.d
 
-## 201602-GA, 201604-GA, 201605-GA, 201612-GA
+## 201602-GA
+
+##  201604-GA
+
+## 201605-GA
+
+## 201612-GA
 
 ## 201701-GA
+
+[Alfresco 201701-GA](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/201701-GA) example running with Solr6 node and libreoffice 5.2.1
