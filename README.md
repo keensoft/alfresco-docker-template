@@ -43,7 +43,7 @@ This example deploys Alfresco 5.0.d running with Solr4 node and libreoffice 4.4.
 
 This examples shows how to make use of Ian Wrigth's Alfresco-CAS integration with support for SSO and SLO
 
-### 201612-GA
+### [201612-GA](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/201612-GA)
 
 This examples uses 201612-GA template to deploy Alfresco, Share and Solr4 standalone, along with the api-explorer
 
