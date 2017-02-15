@@ -1,0 +1,27 @@
+version: '2'
+services:
+ alfresco:
+  build: ./alfresco
+  links:
+   - solr4
+   - libreoffice
+  ports:
+   - 8080:8080
+   - 9999:9999
+
+ db:
+  build: ./postgres
+  network_mode: service:alfresco
+  environment:
+   - POSTGRES_DB=alfresco
+   - POSTGRES_USER=alfresco
+   - POSTGRES_PASSWORD=alfresco
+
+ solr4:
+  build: ./solr4
+  ports:
+   - 8081:8081
+
+ libreoffice:
+  image: keensoft/libreoffice:4.4.5
+  user: root

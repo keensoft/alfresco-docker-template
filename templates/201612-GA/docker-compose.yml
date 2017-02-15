@@ -18,7 +18,7 @@ services:
    - POSTGRES_PASSWORD=alfresco
 
  solr6:
-  image: keensoft/alfresco-5.2.0-solr6
+  image: keensoft/alfresco-solr6:201612-GA
   ports:
    - 8983:8983
 

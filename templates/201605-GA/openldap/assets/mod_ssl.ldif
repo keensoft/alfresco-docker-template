@@ -1,0 +1,11 @@
+# create new
+dn: cn=config
+changetype: modify
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/openldap/certs/cacert.pem
+-
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/openldap/certs/servercrt.pem
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/openldap/certs/serverkey.pem

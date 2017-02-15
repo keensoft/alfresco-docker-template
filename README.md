@@ -16,6 +16,8 @@ This template can be used to deploy custom Alfresco Community installations star
 FROM keensoft/alfresco-docker-template:latest
 ~~~~~
 
+[We](http://keensoft.es/) are using this templated "dockerized Alfresco" idea at the moment in several ways in our day to day Document Management solutions development lifecycle, like for example reproducing issues and so on.
+
 ## Stack
 
 *   [Centos 7](https://hub.docker.com/_/centos/)
@@ -24,18 +26,27 @@ FROM keensoft/alfresco-docker-template:latest
 
 ## Templates in action
 
-## 4.2.c
+### [4.2.c](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/4.2.c)
 
-## 5.0.d
+This example deploys Alfresco 4.2.c with Alfresco, Share and Solr4 within the same tomcat instance. Note that in this version alfresco-solr was distributed in a separate ZIP so deployment is a bit different
 
-## 201602-GA
+### [5.0.d](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/5.0.d)
 
-##  201604-GA
+This example deploys Alfresco 5.0.d running with Solr4 node and libreoffice 4.4.5 on separate containers
 
-## 201605-GA
 
-## 201612-GA
+### 201602-GA
 
-## 201701-GA
+### 201604-GA
 
-[Alfresco 201701-GA](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/201701-GA) example running with Solr6 node and libreoffice 5.2.1
+### [201605-GA](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/201605-GA)
+
+This examples shows how to make use of Ian Wrigth's Alfresco-CAS integration with support for SSO and SLO
+
+### 201612-GA
+
+This examples uses 201612-GA template to deploy Alfresco, Share and Solr4 standalone, along with the api-explorer
+
+### [201701-GA](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/201701-GA)
+
+This example uses alfresco-docker-template:201701-GA to deploy Alfresco 5.2.0 running with Solr6 node and libreoffice 5.2.1

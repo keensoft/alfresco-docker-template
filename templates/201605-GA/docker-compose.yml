@@ -1,25 +1,50 @@
-version: "2"
+version: '2'
 services:
  alfresco:
-    build: .
-    depends_on:
-      - postgres
-      - libreoffice
-    container_name: alfresco-example-container
-    links:
-      - postgres
-      - libreoffice
-    ports:
-      - 8080:8080
+  build: ./alfresco
+  links:
+   - share
+   - httpd
+   - solr4
+   - libreoffice
+   - cas
+
+ db:
+  build: ./postgres
+  network_mode: service:alfresco
+  environment:
+   - POSTGRES_DB=alfresco
+   - POSTGRES_USER=alfresco
+   - POSTGRES_PASSWORD=alfresco
+
+ httpd:
+  build: ./httpd
+  ports:
+   - 80:80
+   - 443:443
+
+ share:
+  build: ./share
+  links: 
+   - cas
+   - httpd
+
+ solr4:
+  build: ./solr4
 
  libreoffice:
-    image: keensoft/libreoffice:4.4.5
-    container_name: libreoffice
-    user: root
- postgres:
-    image: postgres 
-    container_name: postgres
-    environment:
-      - POSTGRES_DB=alfresco
-      - POSTGRES_USER=alfresco
-      - POSTGRES_PASSWORD=alfresco
+  image: keensoft/libreoffice:4.4.5
+  user: root
+ 
+ cas:
+  build: ./cas
+  ports: 
+   - 8443:8443
+  links:
+   - ldap
+
+ ldap:
+  build: ./openldap
+  ports:
+   - 389:389
+   - 636:636

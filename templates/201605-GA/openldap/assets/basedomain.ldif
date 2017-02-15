@@ -1,0 +1,35 @@
+dn: dc=keensoft,dc=es
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: keensoft
+dc: keensoft
+
+dn: cn=Manager,dc=keensoft,dc=es
+objectClass: organizationalRole
+cn: Manager
+description: Directory Manager
+
+dn: ou=People,dc=keensoft,dc=es
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Group,dc=keensoft,dc=es
+objectClass: organizationalUnit
+ou: Group
+
+dn: uid=mikel,ou=People,dc=keensoft,dc=es
+objectClass: person
+objectClass: inetOrgPerson
+cn: mikel
+sn: mikel
+uid: mikel
+userPassword: mikel
+
+dn: uid=admin,ou=People,dc=keensoft,dc=es
+objectClass: person
+objectClass: inetOrgPerson
+cn: admin
+sn: admin
+uid: admin
+userPassword: secret
