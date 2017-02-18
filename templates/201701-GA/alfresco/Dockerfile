@@ -42,6 +42,9 @@ COPY assets/amps amps
 COPY assets/amps_share amps_share
 RUN bash ./bin/apply_amps.sh -force -nobackup
 
+# Add api-explorer WAR file
+COPY assets/api-explorer/api-explorer.war tomcat/webapps/api-explorer.war
+
 ENV PATH $ALF_HOME/bin:$PATH
 ENV LANG es_ES.utf8
 
