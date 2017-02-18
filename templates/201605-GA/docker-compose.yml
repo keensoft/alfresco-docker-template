@@ -33,8 +33,7 @@ services:
   build: ./solr4
 
  libreoffice:
-  image: keensoft/libreoffice:4.4.5
-  user: root
+  image: xcgd/libreoffice
  
  cas:
   build: ./cas

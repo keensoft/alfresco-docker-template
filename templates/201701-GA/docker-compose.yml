@@ -27,4 +27,4 @@ services:
    - 8983:8983
 
  libreoffice:
-  image: keensoft/libreoffice:5.2.1
+  image: xcgd/libreoffice

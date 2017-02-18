@@ -16,5 +16,4 @@ services:
    - POSTGRES_PASSWORD=alfresco
 
  libreoffice:
-  image: keensoft/libreoffice:4.4.5
-  user: root
+  image: xcgd/libreoffice

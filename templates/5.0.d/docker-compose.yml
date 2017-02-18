@@ -23,5 +23,4 @@ services:
    - 8081:8081
 
  libreoffice:
-  image: keensoft/libreoffice:4.4.5
-  user: root
+  image: xcgd/libreoffice
