@@ -8,7 +8,7 @@ RUN set -x \
 		lsof \
 	&& yum clean all
 
-ENV SOLR6_DOWNLOAD_URL https://download.alfresco.com/release/community/201702-build-00016/alfresco-search-services-1.0.0.zip
+ENV SOLR6_DOWNLOAD_URL https://download.alfresco.com/release/community/201704-build-00019/alfresco-search-services-1.0.0.zip
 ENV SOLR_DIR /usr/local/solr
 
 RUN set -x \
