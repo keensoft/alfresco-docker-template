@@ -37,11 +37,9 @@
    </config>
 
    <!-- Disable the CSRF Token Filter -->
-   <!--
    <config evaluator="string-compare" condition="CSRFPolicy" replace="true">
       <filter/>
    </config>
-   -->
 
    <!--
       To run the CSRF Token Filter behind 1 or more proxies that do not rewrite the Origin or Referere headers:

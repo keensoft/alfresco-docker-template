@@ -1,11 +1,11 @@
-FROM keensoft/centos7-java8
+FROM keensoft/base:centos7-openjdk8
 MAINTAINER keensoft.es
 
 RUN set -x \
-	&& yum update -y \
 	&& yum install -y \
 		unzip \
 		lsof \
+		wget \
 	&& yum clean all
 
 ENV SOLR6_DOWNLOAD_URL https://download.alfresco.com/release/community/201704-build-00019/alfresco-search-services-1.0.0.zip

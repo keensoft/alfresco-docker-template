@@ -1,0 +1,34 @@
+version: '3'
+services:
+ alfresco:
+  build: ./alfresco
+  links:
+   - share
+   - solr4
+   - libreoffice
+
+ db:
+  build: ./postgres
+  network_mode: service:alfresco
+  environment:
+   - POSTGRES_DB=alfresco
+   - POSTGRES_USER=alfresco
+   - POSTGRES_PASSWORD=alfresco
+
+ share:
+  build: ./share
+
+ nginx:
+  build: ./nginx
+  ports:
+   - 80:80
+   - 443:443
+  links:
+   - share
+   - alfresco
+
+ solr4:
+  build: ./solr4
+
+ libreoffice:
+  image: xcgd/libreoffice
