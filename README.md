@@ -2,7 +2,8 @@
 
 ## TAGS
 
-*  201704-GA, latest [201704-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201704-GA/Dockerfile) 
+*  201707-GA, latest [201707-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201707-GA/Dockerfile) 
+*  201704-GA [201704-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201704-GA/Dockerfile) 
 *  201702-GA [201702-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201702-GA/Dockerfile) 
 *  201701-GA [201701-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201701-GA/Dockerfile)
 *  201612-GA [201612-GA/Dockerfile](https://github.com/keensoft/alfresco-docker-template/blob/master/201612-GA/Dockerfile)
@@ -17,7 +18,7 @@
 This template can be used to deploy custom Alfresco Community installations starting your Dockerfiles with the following statement
 
 ~~~~~
-FROM keensoft/alfresco-docker-template:201704-GA
+FROM keensoft/alfresco-docker-template:201707-GA
 ~~~~~
 
 [We](http://keensoft.es/) are using this templated "dockerized Alfresco" idea at the moment in several ways in our day to day Document Management solutions development lifecycle, like integration tests or reproducing issues and so on.
@@ -32,10 +33,7 @@ Base images (centos7-openjdk8 and centos7-openjdk8-tomcat7) are located [here](h
 
 ## Templates in action
 
-commands to run
-accesos
-docker-compose
-
+Example for each Alfresco version
 
 ### [4.2.c](https://github.com/keensoft/alfresco-docker-template/tree/master/templates/4.2.c)
 
