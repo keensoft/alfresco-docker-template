@@ -1,0 +1,42 @@
+version: '3'
+services:
+ alfresco:
+  build: ./alfresco
+  links:
+   - db
+   - share
+   - solr6
+   - libreoffice
+  ports:
+   - 9999:9999
+  environment:
+   - LANG=en_US.utf8
+
+ share:
+  build: ./share
+  ports:
+   - 8080:8080
+
+ nginx:
+  build: ./nginx
+  links:
+   - alfresco:alfresco
+   - share:share
+  ports: 
+   - 80:80
+   - 443:443
+
+ db:
+  build: ./postgres
+  environment:
+   - POSTGRES_DB=alfresco
+   - POSTGRES_USER=alfresco
+   - POSTGRES_PASSWORD=alfresco
+
+ solr6:
+  image: keensoft/alfresco-solr6:201707-GA
+  ports:
+   - 8983:8983
+
+ libreoffice:
+  image: xcgd/libreoffice

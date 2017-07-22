@@ -1,0 +1,10 @@
+[Bootstrap]
+HideEula=1
+Logo=0
+NativeProgress=false
+ProgressBarColor=222,72,20
+ProgressFrameColor=245,245,245
+ProgressPosition=72,189
+ProgressSize=409,8
+ProgressTextBaseline=170
+ProgressTextColor=255,255,255
