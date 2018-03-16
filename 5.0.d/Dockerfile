@@ -1,5 +1,7 @@
-FROM keensoft/centos7-java8-tomcat7.0.69
-MAINTAINER keensoft.es
+FROM keensoft/base:centos7-openjdk8-tomcat7
+LABEL maintainer "mikel.asla@keensoft.es"
+LABEL version "1.0"
+LABEL description "This is alfresco-docker-template version 5.0.d"
 
 RUN yum update -y
 RUN yum install -y unzip 
