@@ -1,18 +1,33 @@
 FROM ubuntu:xenial
-MAINTAINER florent.aide@gmail.com
+LABEL maintainer "mikel.asla@keensoft.es"
+LABEL version "1.0"
+LABEL description "This is alfresco-docker-template version 201707-GA" 
 
 ENV DEBIAN_FRONTEND noninteractive
-# version 1:4.2.8-0ubuntu2
 
-RUN apt-get update && apt-get -y -q install libreoffice libreoffice-writer ure libreoffice-java-common libreoffice-core libreoffice-common openjdk-8-jre fonts-opensymbol hyphen-fr hyphen-de hyphen-en-us hyphen-it hyphen-ru fonts-dejavu fonts-dejavu-core fonts-dejavu-extra fonts-noto fonts-dustin fonts-f500 fonts-fanwood fonts-freefont-ttf fonts-liberation fonts-lmodern fonts-lyx fonts-sil-gentium fonts-texgyre fonts-tlwg-purisa && apt-get -q -y remove libreoffice-gnome
-EXPOSE 8997
+RUN set -x \
+	&& apt-get update \
+	&& apt-get -y -q install \
+		hyphen-* \
+		fonts-*\
+		libreoffice \
+		libreoffice-writer
+		libreoffice-java-common 
+		libreoffice-core 
+		libreoffice-common 
+		openjdk-8-jre
+		ure
+	&& apt-get -q -y remove libreoffice-gnome\
+	&& apt-get clean
 
-RUN adduser --home=/opt/libreoffice --disabled-password --gecos "" --shell=/bin/bash libreoffice
 
-# replace default setup with a one disabling logos by default
+RUN set -x \
+	&& adduser --home=/opt/libreoffice --disabled-password --gecos "" --shell=/bin/bash libreoffice
+
 ADD sofficerc /etc/libreoffice/sofficerc
 ADD startoo.sh /opt/libreoffice/startoo.sh
+RUN set -x \
+	&& chmod +x /opt/libreoffice/startoo.sh
 VOLUME ["/tmp"]
-RUN chmod +x /opt/libreoffice/startoo.sh
-
+EXPOSE 8100
 ENTRYPOINT ["/opt/libreoffice/startoo.sh"]
