@@ -1,5 +1,7 @@
 FROM keensoft/base:centos7-openjdk8-tomcat7
-MAINTAINER keensoft.es
+LABEL maintainer "mikel.asla@keensoft.es"
+LABEL version "1.0"
+LABEL description "This is alfresco-docker-template version 201704-GA"
 
 RUN set -x \
 	&& yum install -y \
