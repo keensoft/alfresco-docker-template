@@ -11,12 +11,12 @@ RUN set -x \
 		hyphen-* \
 		fonts-*\
 		libreoffice \
-		libreoffice-writer
-		libreoffice-java-common 
-		libreoffice-core 
-		libreoffice-common 
-		openjdk-8-jre
-		ure
+		libreoffice-writer \
+		libreoffice-java-common \ 
+		libreoffice-core \ 
+		libreoffice-common \ 
+		openjdk-8-jre \
+		ure \
 	&& apt-get -q -y remove libreoffice-gnome\
 	&& apt-get clean
 

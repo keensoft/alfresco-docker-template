@@ -14,8 +14,7 @@
 ## Run
 
 ~~~~~
-$ docker-compose up -d --build
-$ docker-compose logs -f alfresco
+$ docker-compose up --build
 ~~~~~
 
 ## Access 

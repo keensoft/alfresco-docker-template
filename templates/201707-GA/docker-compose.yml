@@ -1,12 +1,15 @@
-version: '3'
+version: '3.1'
+
+networks:
+  appNet:
+
 services:
  alfresco:
   build: ./alfresco
-  links:
-   - db
-   - share
-   - solr6
-   - libreoffice
+  networks:
+   dphNet:
+    aliases:
+      - alfresco
   ports:
    - 9999:9999
   environment:
@@ -19,9 +22,10 @@ services:
 
  nginx:
   build: ./nginx
-  links:
-   - alfresco:alfresco
-   - share:share
+  networks:
+   dphNet:
+    aliases:
+      - nginx
   ports: 
    - 80:80
    - 443:443
@@ -36,7 +40,7 @@ services:
  solr6:
   image: keensoft/alfresco-solr6:201707-GA
   ports:
-   - 8983:8983
+   - 8100:8100
 
  libreoffice:
-  image: xcgd/libreoffice
+  image: keensoft/libreoffice:latest
