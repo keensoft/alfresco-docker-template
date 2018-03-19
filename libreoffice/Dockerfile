@@ -9,7 +9,6 @@ RUN set -x \
 	&& apt-get update \
 	&& apt-get -y -q install \
 		hyphen-* \
-		fonts-*\
 		libreoffice \
 		libreoffice-writer \
 		libreoffice-java-common \ 
