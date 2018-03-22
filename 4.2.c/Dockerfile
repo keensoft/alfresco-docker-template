@@ -3,8 +3,11 @@ LABEL maintainer "mikel.asla@keensoft.es"
 LABEL version "1.0"
 LABEL description "This is alfresco-docker-template version 4.2.c"
 
-RUN yum update -y
-RUN yum install -y unzip 
+RUN set -x \
+	&& yum install -y \
+		unzip \
+		wget \
+	&& yum clean all
 
 ENV ALF_DOWNLOAD_URL http://dl.alfresco.com/release/community/build-04576/alfresco-community-4.2.c.zip
 ENV SOLR_DOWNLOAD_URL http://dl.alfresco.com/release/community/build-04576/alfresco-community-solr-4.2.c.zip

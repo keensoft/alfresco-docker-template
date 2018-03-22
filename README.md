@@ -41,7 +41,6 @@ Containers
 
 * alfresco 5.2.g 
 * share 5.2.f
-* nginx 1.12.1 (reverse proxy on port 80/443)
 * postgres 9.4
 * libreoffice 5.1.2
 * solr6 (alfresco-search-services-1.1.0)

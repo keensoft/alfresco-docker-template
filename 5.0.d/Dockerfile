@@ -3,8 +3,11 @@ LABEL maintainer "mikel.asla@keensoft.es"
 LABEL version "1.0"
 LABEL description "This is alfresco-docker-template version 5.0.d"
 
-RUN yum update -y
-RUN yum install -y unzip 
+RUN set -x \
+	&& yum install -y \
+		unzip \
+		wget \
+	&& yum clean all
 
 ENV ALF_DOWNLOAD_URL http://dl.alfresco.com/release/community/5.0.d-build-00002/alfresco-community-5.0.d.zip
 ENV ALF_HOME /usr/local/alfresco

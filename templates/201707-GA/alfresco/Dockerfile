@@ -44,6 +44,9 @@ COPY assets/alfresco/apply_alfresco_amps.sh $ALF_HOME/bin/apply_amps.sh
 COPY assets/amps amps
 RUN bash ./bin/apply_amps.sh -nobackup
 
+# JARS installation
+COPY assets/jars/ $ALF_HOME/modules/platform
+
 # Add api-explorer WAR file
 RUN set -x \
 	&& wget https://artifacts.alfresco.com/nexus/service/local/repositories/releases/content/org/alfresco/api-explorer/5.2.0/api-explorer-5.2.0.war -O tomcat/webapps/api-explorer.war

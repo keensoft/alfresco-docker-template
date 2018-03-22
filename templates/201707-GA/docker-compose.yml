@@ -11,6 +11,7 @@ services:
     aliases:
       - alfresco
   ports:
+   - 8080:8080
    - 9999:9999
   environment:
    - LANG=en_US.utf8
@@ -18,17 +19,7 @@ services:
  share:
   build: ./share
   ports:
-   - 8080:8080
-
- nginx:
-  build: ./nginx
-  networks:
-   dphNet:
-    aliases:
-      - nginx
-  ports: 
-   - 80:80
-   - 443:443
+   - 9090:8080 
 
  db:
   build: ./postgres
@@ -36,11 +27,21 @@ services:
    - POSTGRES_DB=alfresco
    - POSTGRES_USER=alfresco
    - POSTGRES_PASSWORD=alfresco
+  networks:
+   dphNet:
+    aliases:
+      - db
 
  solr6:
   image: keensoft/alfresco-solr6:201707-GA
-  ports:
-   - 8100:8100
+  networks:
+   dphNet:
+    aliases:
+      - solr6
 
  libreoffice:
   image: keensoft/libreoffice:latest
+  networks:
+   dphNet:
+    aliases:
+      - libreoffice
