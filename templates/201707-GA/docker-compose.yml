@@ -20,6 +20,10 @@ services:
   build: ./share
   ports:
    - 9090:8080 
+  networks:
+   appNet:
+    aliases:
+      - alfresco
 
  db:
   build: ./postgres
