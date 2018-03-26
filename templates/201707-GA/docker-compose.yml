@@ -23,7 +23,7 @@ services:
   networks:
    appNet:
     aliases:
-      - alfresco
+      - share
 
  db:
   build: ./postgres
