@@ -7,7 +7,7 @@ services:
  alfresco:
   build: ./alfresco
   networks:
-   dphNet:
+   appNet:
     aliases:
       - alfresco
   ports:
@@ -28,20 +28,20 @@ services:
    - POSTGRES_USER=alfresco
    - POSTGRES_PASSWORD=alfresco
   networks:
-   dphNet:
+   appNet:
     aliases:
       - db
 
  solr6:
   image: keensoft/alfresco-solr6:201707-GA
   networks:
-   dphNet:
+   appNet:
     aliases:
       - solr6
 
  libreoffice:
   image: keensoft/libreoffice:latest
   networks:
-   dphNet:
+   appNet:
     aliases:
       - libreoffice
