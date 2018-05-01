@@ -14,11 +14,6 @@ Components
 * AOS 1.2.0-RC2
 * api-explorer 5.2.2
 
-Addons
-
-* JavaScript Console 0.6.0
-* OOTB Support Tools 1.1.0.0-SNAPSHOT
-
 # How to use
 
 Before starting to use this project, three Named Docker Volumes must be available
