@@ -60,4 +60,4 @@ COPY target/jars $TOMCAT_DIR/webapps/alfresco/WEB-INF/lib
 RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar install \
             $TOMCAT_DIR/amps $TOMCAT_DIR/webapps/alfresco -directory -nobackup -force
 
-EXPOSE 2121 1143 2525 1445 1137 1138 1139
+EXPOSE 2121 1143 2525 1445 1137/udp 1138/udp 1139

@@ -32,10 +32,10 @@ services:
           - 21:2121   #FTP port
           - 25:2525   #SMTP port
           - 143:1143  #IMAP port
-#          - 445:1145  #CIFS
-#          - 137:1137  #CIFS
-#          - 138:1138  #CIFS
-#          - 139:1139  #CIFS
+#          - 445:1145      #CIFS
+#          - 137:1137/udp  #CIFS
+#          - 138:1138/udp  #CIFS
+#          - 139:1139      #CIFS
 
     share:
         # image: alfresco/alfresco-share:6.0.a
