@@ -1,22 +1,39 @@
 # Alfresco Docker 201804-EA
 
-*Production-ready* composition based in official [Docker Composition](https://github.com/Alfresco/acs-community-deployment/tree/master/docker-compose) provided by Alfresco
+*Production-ready* composition based in official [Docker Composition](https://github.com/Alfresco/acs-community-deployment/tree/master/docker-compose) provided by Alfresco.
 
-Containers
+#### Containers
 
 * alfresco 6.0.5-ea 
 * share 6.0.a
 * postgres 10.1
 * solr6 (alfresco-search-services-1.1.1)
 
-Components
+#### Components
 
 * AOS 1.2.0-RC2
 * api-explorer 5.2.2
 
-# How to use
+# How to use this composition
+
+You can setup Alfresco using either the included Makefile or by using manual commands.
+
+1. Automatic
+
+    Use the Makefile, run `make` on the checked out project root to automatically create the volumes and start docker as a daemon.
+
+2. Manual
+	
+	See below.
+	
+## Setting up manually	
+
 
 Before starting to use this project, three Named Docker Volumes must be available
+
+### Ensure volmes are available
+
+Check for the existance of volumes by issuing `docker volume list`.
 
 ```bash
 $ docker volume list
@@ -25,7 +42,9 @@ local               postgres-data
 local               solr-data
 ```
 
-You can create them by using following sentences:
+### Create Volumes
+
+You can create the volumes by using following commands:
 
 ```bash
 $ docker volume create alf-repo-data
@@ -33,7 +52,9 @@ $ docker volume create postgres-data
 $ docker volume create solr-data
 ```
 
-## Start
+### Start Docker
+
+Start docker and check the ports are correctly bound.
 
 ```bash
 $ docker-compose up -d
@@ -50,7 +71,9 @@ alfresco/alfresco-search-services:1.1.1   8983/tcp
 docker_share     8080/tcp
 ```
 
-Logs
+### Viewing System Logs
+
+You can view the system logs by issuing the following.
 
 ```bash
 $ docker-compose logs -f
@@ -58,8 +81,12 @@ $ docker-compose logs -f
 
 ## Access
 
-User: admin
-Password: admin
+Use the following username/password combination to login.
+
+ - User: admin
+ - Password: admin
+
+Alfresco and related web applications can be accessed from the below URIs when the servers have started.
 
 ```
 https://localhost/share
@@ -72,7 +99,7 @@ https://localhost/api-explorer
 
 ### Deploying additional Addons
 
-You can copy additional Alfresco addons to following paths
+You can copy additional Alfresco addons to following paths.
 
 ```
 alfresco/target/amps
@@ -81,7 +108,7 @@ share/target/amps_share
 share/target/jars
 ```
 
-After `rebuild` the image, they will be available
+After you `rebuild` the image, they will be available within the Alfresco instance.
 
 ### Adding configuration to repository
 
@@ -98,3 +125,7 @@ property=value\n\
 ### Using real SSL certificates
 
 Default SSL certificates are *self-generated*. You can include your certificates at `httpd/assets` folder
+
+
+### Contributors
+- [Bhagya Silva](http://about.me/bhagyas) - [Loftux AB](http://loftux.com?ref=githubx)
