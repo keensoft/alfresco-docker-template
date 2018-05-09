@@ -16,7 +16,6 @@ WORKDIR $ALF_HOME
 RUN set -x \
         && ln -s /usr/local/tomcat /usr/local/alfresco/tomcat \
 	&& mkdir -p $CATALINA_HOME/conf/Catalina/localhost $CATALINA_HOME/shared/classes/alfresco/extension $CATALINA_HOME/shared/lib $ALF_HOME/modules/platform \
-	&& mv $DIST/web-server/conf/Catalina/localhost/alfresco.xml tomcat/conf/Catalina/localhost/ \
         && mv $DIST/web-server/lib/*.jar tomcat/lib/ \
         && mv $DIST/web-server/webapps/alfresco.war tomcat/webapps/ \
         && mv $DIST/alf_data . \
@@ -30,6 +29,7 @@ RUN set -x \
 
 COPY assets/tomcat/catalina.properties tomcat/conf/catalina.properties
 COPY assets/tomcat/setenv.sh tomcat/bin/setenv.sh
+COPY assets/tomcat/alfresco.xml tomcat/conf/Catalina/localhost/
 COPY assets/alfresco/alfresco-global.properties tomcat/shared/classes/alfresco-global.properties
 
 # alfresco-pdf-renderer 

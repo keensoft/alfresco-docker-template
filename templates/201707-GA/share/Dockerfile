@@ -7,8 +7,7 @@ WORKDIR $ALF_HOME
 # basic configuration
 RUN set -x \
         && ln -s /usr/local/tomcat /usr/local/alfresco/tomcat \
-	&& mkdir -p $CATALINA_HOME/conf/Catalina/localhost $CATALINA_HOME/shared/classes/alfresco/web-extensio $CATALINA_HOME/shared/lib $ALF_HOME/modules/share $ALF_HOME/amps_share \
-	&& mv $DIST/web-server/conf/Catalina/localhost/share.xml tomcat/conf/Catalina/localhost \
+	&& mkdir -p $CATALINA_HOME/conf/Catalina/localhost $CATALINA_HOME/shared/classes/alfresco/web-extension $CATALINA_HOME/shared/lib $ALF_HOME/modules/share $ALF_HOME/amps_share \
         && mv $DIST/web-server/webapps/share.war tomcat/webapps/ \
         && mv $DIST/bin . \
         && mv $DIST/licenses . \
@@ -19,6 +18,8 @@ RUN set -x \
 
 COPY assets/tomcat/catalina.properties tomcat/conf/catalina.properties
 COPY assets/tomcat/setenv.sh tomcat/bin/setenv.sh
+COPY assets/tomcat/share.xml tomcat/conf/Catalina/localhost
+
 COPY assets/share/share-config-custom.xml tomcat/shared/classes/alfresco/web-extension/share-config-custom.xml
 
 # AMPS installation
