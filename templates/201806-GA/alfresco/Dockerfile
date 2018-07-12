@@ -36,7 +36,7 @@ RUN set -x \
 
 # Install api-explorer webapp for REST API
 RUN set -x \
-	&& wget https://artifacts.alfresco.com/nexus/service/local/repositories/releases/content/org/alfresco/api-explorer/5.2.2/api-explorer-5.2.2.war -O /usr/local/tomcat/webapps/api-explorer.war
+    && wget https://artifacts.alfresco.com/nexus/service/local/repositories/releases/content/org/alfresco/api-explorer/6.0.7-ga/api-explorer-6.0.7-ga.war -O /usr/local/tomcat/webapps/api-explorer.war
 
 ARG TOMCAT_DIR=/usr/local/tomcat
 
@@ -45,13 +45,13 @@ RUN mkdir -p $TOMCAT_DIR/amps
 # Install AOS
 RUN set -x \
         && mkdir /tmp/aos \
-        && wget --no-check-certificate https://download.alfresco.com/cloudfront/release/community/201804-EA-build-00073/alfresco-aos-module-distributionzip-1.2.0-RC2.zip \
-        && unzip alfresco-aos-module-distributionzip-1.2.0-RC2.zip -d /tmp/aos \
+        && wget --no-check-certificate https://download.alfresco.com/cloudfront/release/community/201806-GA-build-00113/alfresco-aos-module-distributionzip-1.2.0.zip \
+        && unzip alfresco-aos-module-distributionzip-1.2.0.zip -d /tmp/aos \
         && mv /tmp/aos/extension/* /usr/local/tomcat/shared/classes/alfresco/extension \
-        && mv /tmp/aos/alfresco-aos-module-1.2.0-RC2.amp amps \
+        && mv /tmp/aos/alfresco-aos-module-1.2.0.amp amps \
         && mv /tmp/aos/aos-module-license.txt licenses \
         && mv /tmp/aos/_vti_bin.war /usr/local/tomcat/webapps \
-        && rm -rf /tmp/aos alfresco-aos-module-distributionzip-1.2.0-RC2.zip
+        && rm -rf /tmp/aos alfresco-aos-module-distributionzip-1.2.0.zip
 
 # Install modules and addons
 COPY target/amps $TOMCAT_DIR/amps

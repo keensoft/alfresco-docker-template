@@ -2,57 +2,27 @@
 
 *Production-ready* composition based in official [Docker Composition](https://github.com/Alfresco/acs-community-deployment/tree/master/docker-compose) provided by Alfresco.
 
-#### Containers
+## Containers
 
 * alfresco 6.0.7-ga 
 * share 6.0.b
 * postgres 10.1
 * solr6 (alfresco-search-services-1.1.1)
 
-#### Components
+## Components
 
-* AOS 1.1.1
-* api-explorer 5.2.2
+* AOS 1.2.0
+* api-explorer 6.0.7-ga
 
 # How to use this composition
 
-You can setup Alfresco using either the included Makefile or by using manual commands.
+Data wil be persisted automatically in `data` folder. Once launched, Docker will create three subfolders for following services:
 
-1. Automatic
+* `alf-repo-data` for Content Store
+* `postgres-data` for Database
+* `solr-data` for Indexes
 
-    Use the Makefile, run `make` on the checked out project root to automatically create the volumes and start docker as a daemon.
-
-2. Manual
-	
-	See below.
-	
-## Setting up manually	
-
-
-Before starting to use this project, three Named Docker Volumes must be available
-
-### Ensure volmes are available
-
-Check for the existance of volumes by issuing `docker volume list`.
-
-```bash
-$ docker volume list
-local               alf-repo-data
-local               postgres-data
-local               solr-data
-```
-
-### Create Volumes
-
-You can create the volumes by using following commands:
-
-```bash
-$ docker volume create alf-repo-data
-$ docker volume create postgres-data
-$ docker volume create solr-data
-```
-
-### Start Docker
+## Start Docker
 
 Start docker and check the ports are correctly bound.
 
@@ -125,7 +95,3 @@ property=value\n\
 ### Using real SSL certificates
 
 Default SSL certificates are *self-generated*. You can include your certificates at `httpd/assets` folder
-
-
-### Contributors
-- [Bhagya Silva](http://about.me/bhagyas) - [Loftux AB](http://loftux.com?ref=githubx)
