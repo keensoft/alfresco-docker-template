@@ -54,8 +54,8 @@ RUN set -x \
         && rm -rf /tmp/aos alfresco-aos-module-distributionzip-1.2.0.zip
 
 # Install modules and addons
-COPY target/amps $TOMCAT_DIR/amps
-COPY target/jars $TOMCAT_DIR/webapps/alfresco/WEB-INF/lib
+COPY modules/amps $TOMCAT_DIR/amps
+COPY modules/jars $TOMCAT_DIR/webapps/alfresco/WEB-INF/lib
 
 RUN java -jar $TOMCAT_DIR/alfresco-mmt/alfresco-mmt*.jar install \
             $TOMCAT_DIR/amps $TOMCAT_DIR/webapps/alfresco -directory -nobackup -force
