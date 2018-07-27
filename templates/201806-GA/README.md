@@ -22,6 +22,8 @@ Data wil be persisted automatically in `data` folder. Once launched, Docker will
 * `postgres-data` for Database
 * `solr-data` for Indexes
 
+For Linux hosts, set `solr-data` folder permissions for a user with UID 1001, as `alfresco-search-services` is using an container user named `solr` with UID 1001.
+
 ## Start Docker
 
 Start docker and check the ports are correctly bound.
