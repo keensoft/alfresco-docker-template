@@ -96,7 +96,7 @@ property=value\n\
 
 ### Using real SSL certificates
 
-Default SSL certificates are *self-generated*. You can include your certificates at `httpd/assets` folder
+Default SSL certificates are *self-generated*. You can include your certificates at `https/assets` folder
 
 ### Using plain HTTP
 
