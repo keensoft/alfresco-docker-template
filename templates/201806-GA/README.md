@@ -97,3 +97,22 @@ property=value\n\
 ### Using real SSL certificates
 
 Default SSL certificates are *self-generated*. You can include your certificates at `httpd/assets` folder
+
+### Using plain HTTP
+
+You can use plain HTTP by using `docker-compose-http.yml` Docker Compose
+
+```
+$ docker-compose -f docker-compose-http.yml` up
+```
+
+With this option, following services are available:
+
+```
+http://localhost/share
+http://localhost/alfresco
+http://localhost/solr
+http://localhost/api-explorer
+```
+
+
