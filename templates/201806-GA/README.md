@@ -74,10 +74,10 @@ https://localhost/api-explorer
 You can copy additional Alfresco addons to following paths.
 
 ```
-alfresco/target/amps
-alfresco/target/jars
-share/target/amps_share
-share/target/jars
+alfresco/modules/amps
+alfresco/modules/jars
+share/modules/amps_share
+share/modules/jars
 ```
 
 After you `rebuild` the image, they will be available within the Alfresco instance.
